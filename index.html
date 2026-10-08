@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASELY | Fundas para tu estilo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">CASELY</div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Fundas</a>
+            <a href="#nosotros">Nosotros</a>
+        </nav>
+
+        <div class="header-buttons">
+            <button id="darkModeBtn" class="icon-btn">🌙</button>
+            <button id="favoritesBtn" class="icon-btn">♡</button>
+            <button id="cartBtn" class="cart-btn">
+                🛍️ <span id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- INICIO -->
+        <section id="inicio" class="hero">
+
+            <div class="hero-text">
+                <p class="small-title">TU CELULAR, TU ESTILO</p>
+
+                <h1>Fundas que<br><span>hablan de vos.</span></h1>
+
+                <p class="hero-description">
+                    Encontrá la funda perfecta para proteger tu celular
+                    sin dejar de lado tu estilo.
+                </p>
+
+                <a href="#productos" class="main-btn">Ver colección</a>
+            </div>
+
+            <div class="hero-decoration">
+                <div class="phone">
+                    <div class="camera"></div>
+                    <div class="phone-design">CASELY</div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCTOS -->
+        <section id="productos" class="products-section">
+
+            <div class="section-title">
+                <p class="small-title">NUESTRA COLECCIÓN</p>
+                <h2>Elegí tu favorita</h2>
+            </div>
+
+
+            <!-- BUSCADOR -->
+            <div class="controls">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="🔎 Buscar una funda..."
+                >
+
+                <select id="categoryFilter">
+                    <option value="todos">Todas las categorías</option>
+                    <option value="minimalista">Minimalistas</option>
+                    <option value="floral">Florales</option>
+                    <option value="cute">Cute</option>
+                    <option value="transparente">Transparentes</option>
+                </select>
+
+                <select id="priceFilter">
+                    <option value="todos">Todos los precios</option>
+                    <option value="low">Hasta $15.000</option>
+                    <option value="medium">$15.000 - $20.000</option>
+                    <option value="high">Más de $20.000</option>
+                </select>
+
+            </div>
+
+
+            <!-- PRODUCTOS -->
+            <div id="productsContainer" class="products-grid"></div>
+
+        </section>
+
+
+        <!-- NOSOTROS -->
+        <section id="nosotros" class="about">
+
+            <div>
+                <p class="small-title">SOBRE CASELY</p>
+                <h2>Tu celular también puede ser parte de tu estilo.</h2>
+            </div>
+
+            <p>
+                CASELY nació para crear fundas lindas, originales y
+                funcionales. Elegimos diseños para que puedas proteger
+                tu celular y al mismo tiempo hacerlo más vos.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- CARRITO -->
+    <div id="cartPanel" class="cart-panel">
+
+        <div class="cart-header">
+            <h2>Tu carrito</h2>
+            <button id="closeCart">✕</button>
+        </div>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-footer">
+            <div class="total">
+                <span>Total</span>
+                <strong id="cartTotal">$0</strong>
+            </div>
+
+            <button id="checkoutBtn" class="main-btn checkout">
+                Finalizar compra
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- FONDO DEL CARRITO -->
+    <div id="overlay" class="overlay"></div>
+
+
+    <!-- MENSAJE -->
+    <div id="message" class="message"></div>
+
+
+    <footer>
+        <div class="logo">CASELY</div>
+        <p>Fundas para celulares · Hecho con estilo ♡</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
